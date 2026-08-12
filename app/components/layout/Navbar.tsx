@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { usePopup } from "@/app/context/PopupContext";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -18,6 +19,7 @@ const navItems = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const { openPopup } = usePopup();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,7 +85,13 @@ export default function Navbar() {
         {/* CTA */}
 
         <div className="w-[220px] flex justify-end">
-          <button className="rounded-full border border-[#d4af5a] bg-white/5 px-7 py-3 text-sm font-semibold uppercase tracking-[2px] text-[#d4af5a] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-[#d4af5a] hover:text-[#2b0d12] hover:shadow-[0_0_30px_rgba(212,175,90,0.35)]">
+          <button
+  onClick={() => {
+  console.log("Button Clicked");
+  openPopup("Express Your Interest");
+}}
+  className="rounded-full border border-[#d4af5a] bg-white/5 px-7 py-3 text-sm font-semibold uppercase tracking-[2px] text-[#d4af5a] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-[#d4af5a] hover:text-[#2b0d12] hover:shadow-[0_0_30px_rgba(212,175,90,0.35)]"
+>
             Enquire Now
           </button>
         </div>

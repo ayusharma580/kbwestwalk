@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import { PopupProvider } from "./context/PopupContext";
+import { ChatProvider } from "./context/ChatContext";
+import ChatbotLoader from "./components/chatbot/chatbotLoader";
+
 export const metadata: Metadata = {
   title: "KB West Walk | Premium Commercial Destination",
   description:
     "KB West Walk is a premium commercial development offering luxury retail spaces, modern office spaces, fine dining, entertainment, and investment opportunities in a prime location.",
+
   keywords: [
     "KB West Walk",
     "Commercial Property",
@@ -15,21 +20,29 @@ export const metadata: Metadata = {
     "Investment",
     "Premium Commercial Project",
   ],
+
   authors: [
     {
       name: "KB West Walk",
     },
   ],
+
   creator: "KB West Walk",
+
   publisher: "KB West Walk",
 
   openGraph: {
     title: "KB West Walk",
+
     description:
       "Experience a premium commercial destination designed for business, retail, lifestyle, and investment.",
+
     url: "/",
+
     siteName: "KB West Walk",
+
     locale: "en_IN",
+
     type: "website",
   },
 
@@ -53,8 +66,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+
+        <PopupProvider>
+
+          <ChatProvider>
+
+            {children}
+
+            <ChatbotLoader />
+
+          </ChatProvider>
+
+        </PopupProvider>
+
       </body>
     </html>
   );
-}
+} 

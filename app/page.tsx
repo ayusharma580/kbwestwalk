@@ -2,7 +2,7 @@ import Navbar from "./components/layout/Navbar";
 import RightSidebar from "./components/layout/RightSidebar";
 import EnquiryForm from "./components/layout/EnquiryForm";
 import Footer from "./components/layout/Footer";
-
+import LeadPopup from "./components/popup/LeadPopup";
 import Hero from "./components/sections/hero/Hero";
 import Overview from "./components/sections/overview/Overview";
 import Highlights from "./components/sections/highlights/Highlights";
@@ -54,6 +54,7 @@ export default function Home() {
           <Contact />
         </section>
       </main>
+      <LeadPopup />
 
       <EnquiryForm />
 

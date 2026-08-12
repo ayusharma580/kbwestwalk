@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Ruler } from "lucide-react";
+import { usePopup } from "@/app/context/PopupContext";
 
 const floorPlans = [
   {
@@ -53,11 +54,7 @@ const floorPlans = [
 ];
 
 export default function FloorPlans() {
-  const openEnquiry = () => {
-    document
-      .getElementById("enquiry")
-      ?.scrollIntoView({ behavior: "smooth" });
-  };
+  const { openPopup } = usePopup();
 
   return (
     <section
@@ -170,7 +167,7 @@ export default function FloorPlans() {
                 </div>
 
                 <button
-                  onClick={openEnquiry}
+                  onClick={() => openPopup("Express Your Interest")}
                   className="w-full rounded-full border border-[#d4af5a] px-6 py-3 text-lg font-semibold text-[#d4af5a] transition-all duration-300 hover:bg-[#d4af5a] hover:text-[#0a0e1a]"
                 >
 
