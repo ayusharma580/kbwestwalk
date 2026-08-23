@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import FloatingSocialButtons from "./components/layout/FloatingSocialButtons";
 import "./globals.css";
 
 import { PopupProvider } from "./context/PopupContext";
@@ -74,6 +75,7 @@ export default function RootLayout({
             {children}
 
             <ChatbotLoader />
+            <FloatingSocialButtons />
 
           </ChatProvider>
 
