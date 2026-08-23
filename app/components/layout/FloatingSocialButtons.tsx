@@ -72,7 +72,7 @@ export default function FloatingSocialButtons() {
 
       {/* Phone */}
       <a
-        href="tel:+918587870099"
+        href="tel:+919411019656"
         aria-label="Call KB West Walk"
         className="
           flex
