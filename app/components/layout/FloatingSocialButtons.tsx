@@ -19,7 +19,7 @@ export default function FloatingSocialButtons() {
     >
       {/* Instagram */}
       <a
-        href="YOUR_INSTAGRAM_LINK"
+        href="https://www.instagram.com/kb_west_walk_?igsi=MTVoYTc5YmlqZWJhcw=="
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
@@ -47,7 +47,7 @@ export default function FloatingSocialButtons() {
 
       {/* Facebook */}
       <a
-        href="YOUR_FACEBOOK_LINK"
+        href="https://www.facebook.com/profile.php?id=61592619102391"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Facebook"
