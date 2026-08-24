@@ -7,7 +7,7 @@ import { ChatProvider } from "./context/ChatContext";
 import ChatbotLoader from "./components/chatbot/chatbotLoader";
 
 export const metadata: Metadata = {
-  title: "KB West Walk | Premium Commercial Destination",
+  title: "KB West Walk Greater Noida West | Retail Shops , Studio Apartments & Investment At Premium Commercial Destination",
   description:
     "KB West Walk is a premium commercial development offering luxury retail spaces, modern office spaces, fine dining, entertainment, and investment opportunities in a prime location.",
 
